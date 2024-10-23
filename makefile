@@ -7,7 +7,7 @@ run:
 	@clear
 
 	@echo "Ejecutando numero_lista.pl..."
-	@swipl -s numero_lista.pl -g "my_last(X, [a, b, c, d]), write('my_last(X, [a, b, c, d]))', nl, write('X = '), write(X), nl, halt." || echo "El predicado no existe en numero_lista.pl."
+	@swipl -s numero_lista.pl -g "my_last(X, [a, b, c, d]), write('my_last(X, [a, b, c, d]')), nl, write('X = '), write(X), nl, halt." || echo "El predicado no existe en numero_lista.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando penultimo.pl..."
