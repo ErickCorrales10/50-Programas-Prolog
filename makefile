@@ -106,8 +106,8 @@ run:
 	@swipl -s permutacion.pl -g "rnd_permu([a, b, c, d], P), write('rnd_permu([a, b, c, d])'), nl, write('P = '), write(P), nl, halt." || echo "El predicado no existe en permutacion.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
-	@echo "Ejecutando combinaciones.pl..."
-	@swipl -s combinaciones.pl -g "combination(2, [a, b, c], Comb), write('combination(2, [a, b, c])'), nl, write('Comb = '), write(Comb), nl, fail; true, halt." || echo "El predicado no existe en combinaciones.pl."
+	@echo "Ejecutando combinaciones.pl...\ncombination(2, [a, b, c])"
+	@swipl -s combinaciones.pl -g "combination(2, [a, b, c], Comb), write('Comb = '), write(Comb), nl, fail; true, halt." || echo "El predicado no existe en combinaciones.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando agrupar.pl...\ngroup([2, 2, 2], [1, 2, 3, 4, 5, 6])"
@@ -123,7 +123,7 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando primo.pl..."
-	@swipl -s primo.pl -g "(is_prime(5)) -> write('5 es primo: true') ; write('5 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
+	@swipl -s primo.pl -g "(is_prime(5) -> write('5 es primo: true') ; write('5 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 
