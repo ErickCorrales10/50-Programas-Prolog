@@ -1,5 +1,3 @@
-# Define los nombres de los programas
-PROGRAMS = numero_lista.pl penultimo.pl
 
 # Define el objetivo por defecto
 all: run
@@ -14,6 +12,10 @@ run:
 
 	@echo "Ejecutando penultimo.pl..."
 	@swipl -s penultimo.pl -g "penultimate(X, [a, b, c, d]), write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando k_esimo.pl..."
+	@swipl -s k_esimo.pl -g "element_at(X, [a, b, c, d], 2), write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 # Regla para limpiar (opcional)
