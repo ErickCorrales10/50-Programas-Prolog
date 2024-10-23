@@ -11,11 +11,11 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando penultimo.pl..."
-	@swipl -s penultimo.pl -g "penultimate(X, [a, b, c, d]), write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
+	@swipl -s penultimo.pl -g "penultimate(X, [a, b, c, d]), write('penultimate(X, [a, b, c, d])'), nl, write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando k_esimo.pl..."
-	@swipl -s k_esimo.pl -g "element_at(X, [a, b, c, d], 3), write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
+	@swipl -s k_esimo.pl -g "element_at(X, [a, b, c, d], 3), write('element_at(X, [a, b, c, d], 3)'), nl, write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando elemento_lista.pl..."
