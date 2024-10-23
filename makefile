@@ -11,11 +11,14 @@ PROGRAMS = numero_lista.pl penultimo.pl k_esimo.pl elemento_lista.pl \
 # Define el objetivo por defecto
 all: $(PROGRAMS)
 
-# Regla para ejecutar los programas
-%.pl:
-	@echo "Ejecutando $<..."
-	swipl -s $< -t halt
-	@read -p "Presiona Enter para continuar..." dummy
+# Regla para ejecutar todos los programas
+run: $(PROGRAMS)
+	@for prog in $(PROGRAMS); do \
+		echo "Ejecutando $$prog..."; \
+		swipl -s $$prog -t halt; \
+		read -p "Presiona Enter para continuar..." dummy; \
+	done
+
 
 # Regla para limpiar (opcional)
 clean:
