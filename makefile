@@ -11,7 +11,7 @@ run:
 	echo ""
 	
 	@echo "Ejecutando penultimo.pl..."
-	swipl -s penultimo.pl -g "penultimo(X, [a, b, c, d]), halt." || echo "El predicado no existe en penultimo.pl."
+	swipl -s penultimo.pl -g "penultimate(X, [a, b, c, d]), halt." || echo "El predicado no existe en penultimo.pl."
 	echo ""
 
 # Regla para limpiar (opcional)
