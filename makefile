@@ -2,8 +2,8 @@
 PROGRAMS = numero_lista.pl penultimo.pl
 
 # Define los predicados asociados a cada programa
-PREDICATES = "my_last(X, [a, b, c, d])" \
-             "penultimo(X, [a, b, c, d])".
+PREDICATES = my_last(X, [a, b, c, d]) \
+             penultimo(X, [a, b, c, d]).
 
 # Define el objetivo por defecto
 all: run
@@ -21,4 +21,5 @@ run: $(PROGRAMS)
 # Regla para limpiar (opcional)
 clean:
 	@echo "Limpieza completa"
+
 
