@@ -107,11 +107,11 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando combinaciones.pl..."
-	@swipl -s combinaciones.pl -g "combination(2, [a, b, c], Comb), write('combination(2, [a, b, c])'), nl, write('Comb = '), write(Comb), nl, fail; true." || echo "El predicado no existe en combinaciones.pl."
+	@swipl -s combinaciones.pl -g "combination(2, [a, b, c], Comb), write('combination(2, [a, b, c])'), nl, write('Comb = '), write(Comb), nl, fail; true, halt." || echo "El predicado no existe en combinaciones.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
-	@echo "Ejecutando agrupar.pl..."
-	@swipl -s agrupar.pl -g "group([2, 2, 2], [1, 2, 3, 4, 5, 6], Gs), write('group([2, 2, 2], [1, 2, 3, 4, 5, 6])'), nl, write('Gs = '), write(Gs), nl, fail; true." || echo "El predicado no existe en agrupar.pl."
+	@echo "Ejecutando agrupar.pl...\ngroup([2, 2, 2], [1, 2, 3, 4, 5, 6])"
+	@swipl -s agrupar.pl -g "group([2, 2, 2], [1, 2, 3, 4, 5, 6], Gs), write('Gs = '), write(Gs), nl, fail; true, halt." || echo "El predicado no existe en agrupar.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando ordenar_lista_listas.pl..."
@@ -124,7 +124,6 @@ run:
 
 	@echo "Ejecutando primo.pl..."
 	@swipl -s primo.pl -g "(is_prime(5)) -> write('5 es primo: true') ; write('5 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
-	@swipl -s primo.pl -g "(is_prime(15)) -> write('15 es primo: true') ; write('15 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 
