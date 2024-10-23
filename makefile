@@ -21,5 +21,3 @@ run: $(PROGRAMS)
 # Regla para limpiar (opcional)
 clean:
 	@echo "Limpieza completa"
-
-
