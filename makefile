@@ -1,19 +1,14 @@
-# Define el nombre de los programas y sus respectivos predicados
-PROGRAMS = numero_lista.pl penultimo.pl
-PREDICATES = my_last(X, [a, b, c, d]) penultimo(X, [a, b, c, d])
+# Define el nombre del programa
+PROGRAM = numero_lista.pl
 
 # Define el objetivo por defecto
 all: run
 
-# Regla para ejecutar todos los programas con sus predicados específicos
+# Regla para ejecutar el programa
 run:
-	@for i in 0 1; do \
-		prog=$$(echo $(PROGRAMS) | cut -d' ' -f$$i); \
-		pred=$$(echo $(PREDICATES) | cut -d' ' -f$$i); \
-		echo "Ejecutando $$prog..."; \
-		swipl -s $$prog -g "$$pred, halt." || echo "El predicado no existe en $$prog."; \
-		echo ""; \
-	done
+	@echo "Ejecutando $(PROGRAM)..."
+	swipl -s $(PROGRAM) -g "my_last(X, [a, b, c, d]), halt." || echo "El predicado no existe en $(PROGRAM)."
+	echo ""
 
 # Regla para limpiar (opcional)
 clean:
