@@ -27,7 +27,7 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando palindromo.pl..."
-	@swipl -s palindromo.pl -g "palindrome([a, b, a]) -> write('La lista [a, b, a] es palindromo: true') ; write('La lista [a, b, a] es palindromo: false'), nl, halt." || echo "El predicado no existe en penultimo.pl."
+	@swipl -s palindromo.pl -g "(palindrome([a, b, a]) -> write('La lista [a, b, a] es palindromo: true') ; write('La lista [a, b, a] es palindromo: false')), nl, halt." || echo "El predicado no existe en palindromo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando aplanar.pl..."
@@ -51,3 +51,5 @@ run:
 # Regla para limpiar (opcional)
 clean:
 	@echo "Limpieza completa"
+
+
