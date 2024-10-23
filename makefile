@@ -1,6 +1,6 @@
 # Define el nombre de los programas y sus respectivos predicados
 PROGRAMS = numero_lista.pl penultimo.pl
-PREDICATES = "my_last(X, [a, b, c, d])" "penultimo(X, [a, b, c, d])"
+PREDICATES = my_last(X, [a, b, c, d]) penultimo(X, [a, b, c, d])
 
 # Define el objetivo por defecto
 all: run
