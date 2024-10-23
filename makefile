@@ -10,7 +10,7 @@ run:
 	@swipl -s numero_lista.pl -g "my_last(X, [a, b, c, d]), write('X = '), write(X), nl, halt." || echo "El predicado no existe en numero_lista.pl."
 	
 	@echo "Ejecutando penultimo.pl..."
-	@swipl -s penultimo.pl -g "penultimo(X, [a, b, c, d]), write('Penúltimo = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
+	@swipl -s penultimo.pl -g "penultimate(X, [a, b, c, d]), write('X = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
 
 # Regla para limpiar (opcional)
 clean:
