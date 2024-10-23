@@ -6,11 +6,11 @@ all: run
 
 # Regla para ejecutar los programas
 run:
-	@for prog in $(PROGRAMS); do \
-		echo "Ejecutando $$prog..."; \
-		@swipl -s $$prog -g "my_last(X, [a, b, c, d]), write('X = '), write(X), nl, halt." 2>/dev/null || \
-		@swipl -s $$prog -g "penultimate(X, [a, b, c, d]), write('X = '), write(X), nl, halt." 2>/dev/null || echo "El predicado no existe en $$prog."; \
-	done
+	@echo "Ejecutando numero_lista.pl..."
+	@swipl -s numero_lista.pl -g "my_last(X, [a, b, c, d]), write('X = '), write(X), nl, halt." || echo "El predicado no existe en numero_lista.pl."
+	
+	@echo "Ejecutando penultimo.pl..."
+	@swipl -s penultimo.pl -g "penultimo(X, [a, b, c, d]), write('Penúltimo = '), write(X), nl, halt." || echo "El predicado no existe en penultimo.pl."
 
 # Regla para limpiar (opcional)
 clean:
