@@ -28,6 +28,7 @@ run:
 
 	@echo "Ejecutando palindromo.pl..."
 	@swipl -s palindromo.pl -g "(palindrome([a, b, a]) -> write('La lista [a, b, a] es palindromo: true') ; write('La lista [a, b, a] es palindromo: false')), nl, halt." || echo "El predicado no existe en palindromo.pl."
+	@swipl -s palindromo.pl -g "(palindrome([a, b, a, c]) -> write('La lista [a, b, a, c] es palindromo: true') ; write('La lista [a, b, a, c] es palindromo: false')), nl, halt." || echo "El predicado no existe en palindromo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando aplanar.pl..."
@@ -124,6 +125,7 @@ run:
 
 	@echo "Ejecutando primo.pl..."
 	@swipl -s primo.pl -g "(is_prime(5) -> write('5 es primo: true') ; write('5 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
+	@swipl -s primo.pl -g "(is_prime(15) -> write('15 es primo: true') ; write('15 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 
