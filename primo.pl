@@ -14,9 +14,9 @@
 %         Console.Write("Introduce un numero: ");
 %         if(int.TryParse(Console.ReadLine(), out int numero))
 %             if (EsPrimo(numero))
-%                 Console.WriteLine($"{numero} es un numero primo.");
+%                 Console.WriteLine("{numero} es un numero primo.");
 %             else
-%                 Console.WriteLine($"{numero} no es un numero primo.");
+%                 Console.WriteLine("{numero} no es un numero primo.");
 %         else
 %             Console.WriteLine("Por favor ingrese un numero valido");
 %     }

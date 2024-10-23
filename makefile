@@ -86,6 +86,47 @@ run:
 	@swipl -s eliminar_kesimo.pl -g "remove_at(X, [a, b, c, d], 1, R), write('remove_at(X, [a, b, c, d], 1)'), nl, write('X = '), write(X), nl, write('R = '), write(R), nl, halt." || echo "El predicado no existe en eliminar_kesimo.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
+	@echo "Ejecutando insertar_elemento.pl..."
+	@swipl -s insertar_elemento.pl -g "insert_at(a, [b, c], 1, R), write('insert_at(a, [b, c], 1'), nl, write('R = '), write(R), nl, halt." || echo "El predicado no existe en insertar_elemento.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando crear_lista_enteros.pl..."
+	@swipl -s crear_lista_enteros.pl -g "range(1, 5, R), write('range(1, 5)'), nl, write('R = '), write(R), nl, halt." || echo "El predicado no existe en crear_lista_enteros.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando extraer_aleatorio.pl..."
+	@swipl -s extraer_aleatorio.pl -g "rnd_select([a, b, c, d, e], 2, R), write('rnd_select([a, b, c, d, e], 2)'), nl, write('R = '), write(R), nl, halt." || echo "El predicado no existe en extraer_aleatorio.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando loteria.pl..."
+	@swipl -s loteria.pl -g "lotto(3, 50, L), write('lotto(3, 50)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en loteria.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando permutacion.pl..."
+	@swipl -s permutacion.pl -g "rnd_permu([a, b, c, d], P), write('rnd_permu([a, b, c, d])'), nl, write('P = '), write(P), nl, halt." || echo "El predicado no existe en permutacion.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando combinaciones.pl..."
+	@swipl -s combinaciones.pl -g "combination(2, [a, b, c], Comb), write('combination(2, [a, b, c])'), nl, write('Comb = '), write(Comb), nl, fail; true." || echo "El predicado no existe en combinaciones.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando agrupar.pl..."
+	@swipl -s agrupar.pl -g "group([2, 2, 2], [1, 2, 3, 4, 5, 6], Gs), write('group([2, 2, 2], [1, 2, 3, 4, 5, 6])'), nl, write('Gs = '), write(Gs), nl, fail; true." || echo "El predicado no existe en agrupar.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando ordenar_lista_listas.pl..."
+	@swipl -s ordenar_lista_listas.pl -g "lsort([[a, b], [c], [d, e, f]], Sorted), write('lsort([[a, b], [c], [d, e, f]])'), nl, write('Sorted = '), write(Sorted), nl, halt." || echo "El predicado no existe en ordenar_lista_listas.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando ordena_frecuencia.pl..."
+	@swipl -s ordena_frecuencia.pl -g "length_frequency([[a,b],[c],[d,e,f],[g]],F), write('length_frequency([[a,b],[c],[d,e,f],[g]])'), nl, write('F = '), write(F), nl, halt." || echo "El predicado no existe en ordenar_frecuencia.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando primo.pl..."
+	@swipl -s primo.pl -g "(is_prime(5)) -> write('5 es primo: true') ; write('5 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
+	@swipl -s primo.pl -g "(is_prime(15)) -> write('15 es primo: true') ; write('15 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
 
 
 # Regla para limpiar (opcional)
