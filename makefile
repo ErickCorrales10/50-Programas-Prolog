@@ -134,7 +134,7 @@ run:
 
 	@echo "Ejecutando co_primos.pl..."
 	@swipl -s co_primos.pl -g "(coprime(14, 15) -> write('14 es coprimo de 15: true') ; write('14 es coprimo de 15: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
-	@swipl -s co_primos.pl -g "(coprime(7, 50) -> write('7 es coprimo de 50: true') ; write('7 es coprimo de 50: false')), nl, halt." || echo "El predicado no existe en co_primos.pl."	
+	@swipl -s co_primos.pl -g "(coprime(6, 9) -> write('6 es coprimo de 9: true') ; write('6 es coprimo de 9: false')), nl, halt." || echo "El predicado no existe en co_primos.pl."	
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando totiente.pl..."
