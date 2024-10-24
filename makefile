@@ -128,7 +128,26 @@ run:
 	@swipl -s primo.pl -g "(is_prime(15) -> write('15 es primo: true') ; write('15 es primo: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
+	@echo "Ejecutando mcd.pl..."
+	@swipl -s mcd.pl -g "gcd(48, 18, G), write('gcd(48, 18)'), nl, write('G = '), write(G), nl, halt." || echo "El predicado no existe en mcd.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
 
+	@echo "Ejecutando co_primos.pl..."
+	@swipl -s co_primos.pl -g "(coprime(14, 15) -> write('14 es coprimo de 15: true') ; write('14 es coprimo de 15: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
+	@swipl -s co_primos.pl -g "(coprime(7, 50) -> write('7 es coprimo de 50: true') ; write('7 es coprimo de 50: false')), nl, halt." || echo "El predicado no existe en co_primos.pl."	
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando totiente.pl..."
+	@swipl -s totiente.pl -g "totient(10, Phi), write('totient(10)'), nl, write('Phi = '), write(Phi), nl, halt." || echo "El predicado no existe en totiente.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando factores_primos.pl..."
+	@swipl -s factores_primos.pl -g "prime_factors(28, L), write('prime_factors(28)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en factores_primos.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando factores_multiplicidad.pl..."
+	@swipl -s factores_multiplicidad.pl -g "prime_factors_mult(28, L), write('prime_factors_mult(28)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en factores_multiplicidad.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
 
 # Regla para limpiar (opcional)
 clean:
