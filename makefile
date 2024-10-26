@@ -175,12 +175,12 @@ run:
 
 	@echo "Ejecutando tabla_verdad_operadores.pl..."
 	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(and), write('generate_truth_table(and)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
-	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(or), write('generate_truth_table(or)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
-	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(nand), write('generate_truth_table(nand)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
-	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(nor), write('generate_truth_table(nor)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
-	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(xor), write('generate_truth_table(xor)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
-	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(impl), write('generate_truth_table(impl)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
-	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(equ), write('generate_truth_table(equ)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(or), nl, write('generate_truth_table(or)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(nand), nl, write('generate_truth_table(nand)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(nor), nl, write('generate_truth_table(nor)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(xor), nl, write('generate_truth_table(xor)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(impl), nl, write('generate_truth_table(impl)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(equ), nl, write('generate_truth_table(equ)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando gray.pl..."
