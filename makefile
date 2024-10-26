@@ -166,11 +166,11 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando composiciones_goldbach.pl..."
-	@swipl -s composiciones_goldbach.pl -g "goldbach_list(4, 20, L), write('goldbach_list(4, 20)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en composiciones_goldbach.pl."
+	@swipl -s composiciones_goldbach.pl -g "goldbach_list(4, 20), write('goldbach_list(4, 20)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en composiciones_goldbach.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando tabla_verdad.pl..."
-	@swipl -s tabla_verdad.pl -g "generate_truth_table, write('generate_truth_table'), nl, halt." || echo "El predicado no existe en tabla_verdad.pl."
+	@swipl -s tabla_verdad.pl -g "write('generate_truth_table'), generate_truth_table, nl, halt." || echo "El predicado no existe en tabla_verdad.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando tabla_verdad_operadores.pl..."
