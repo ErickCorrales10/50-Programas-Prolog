@@ -26,8 +26,10 @@
 % en dos variables
 
 table(A, B, Expr) :-
-    write(A), write(' '), write(B), write(' '), 
+    write('['), write(A), write(', ') 
+    write(B), write(' = '), 
     (call(Expr) -> write(true); write(false)),
+    write(']'),
     nl.
 table(_, _, _).
 
