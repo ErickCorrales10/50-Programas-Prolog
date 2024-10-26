@@ -149,6 +149,44 @@ run:
 	@swipl -s factores_multiplicidad.pl -g "prime_factors_mult(28, L), write('prime_factors_mult(28)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en factores_multiplicidad.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
+	@echo "Ejecutando totiente_mejorada.pl..."
+	@swipl -s totiente_mejorada.pl -g "totient_improved(10, Phi), write('totient_improved(10).'), nl, write('Phi = '), write(Phi), nl, halt." || echo "El predicado no existe en totiente_mejorada.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando comparar_totientes.pl..."
+	@swipl -s comparar_totientes.pl -g "compare_totient(10), write('compare_totient(10).'), nl, halt." || echo "El predicado no existe en comparar_totientes.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando primos_rango.pl..."
+	@swipl -s primos_rango.pl -g "prime_list(10, 30, Primes), write('prime_list(10, 30).'), nl, write('Primes = '), write(Primes), nl, halt." || echo "El predicado no existe en primos_rango.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando goldbach.pl..."
+	@swipl -s goldbach.pl -g "goldbach(28, [P1, P2]), format('goldbach(28) = [P1: ~w, P2: ~w]~n', [P1, P2]), halt." || echo "El predicado no existe en goldbach.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando composiciones_goldbach.pl..."
+	@swipl -s composiciones_goldbach.pl -g "goldbach_list(4, 20, L), write('goldbach_list(4, 20)'), nl, write('L = '), write(L), nl, halt." || echo "El predicado no existe en composiciones_goldbach.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando tabla_verdad.pl..."
+	@swipl -s tabla_verdad.pl -g "generate_truth_table, write('generate_truth_table'), nl, halt." || echo "El predicado no existe en tabla_verdad.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando tabla_verdad_operadores.pl..."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(and), write('generate_truth_table(and)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(or), write('generate_truth_table(or)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(nand), write('generate_truth_table(nand)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(nor), write('generate_truth_table(nor)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(xor), write('generate_truth_table(xor)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(impl), write('generate_truth_table(impl)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@swipl -s tabla_verdad_operadores.pl -g "generate_truth_table(equ), write('generate_truth_table(equ)'), nl, halt." || echo "El predicado no existe en tabla_verdad_operadores.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando gray.pl..."
+	@swipl -s gray.pl -g "gray(3, C), write('gray(3)'), nl, write('C = '), write(C), nl, halt." || echo "El predicado no existe en gray.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
 # Regla para limpiar (opcional)
 clean:
 	@echo "Limpieza completa"
