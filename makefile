@@ -154,7 +154,7 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando comparar_totientes.pl..."
-	@swipl -s comparar_totientes.pl -g "compare_totient(10), write('compare_totient(10).'), nl, halt." || echo "El predicado no existe en comparar_totientes.pl."
+	@swipl -s comparar_totientes.pl -g "write('compare_totient(10).'), compare_totient(10), nl, halt." || echo "El predicado no existe en comparar_totientes.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando primos_rango.pl..."
