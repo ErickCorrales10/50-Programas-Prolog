@@ -192,7 +192,8 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando es_arbol.pl..."
-	@swipl -s es_arbol.pl -g "istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil))), t(m, nil, nil)), t(u, t(p, nil, t(q, nil, nil)), nil))) -> write('istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = true') ; write('istree(t(n, t(k,t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = false'), nl, halt." || echo "El predicado no existe en es_arbol.pl."
+	@swipl -s co_primos.pl -g "(coprime(14, 15) -> write('14 es coprimo de 15: true') ; write('14 es coprimo de 15: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
+	@swipl -s es_arbol.pl -g "(istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil))), t(m, nil, nil)), t(u, t(p, nil, t(q, nil, nil)), nil))) -> write('istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = true') ; write('istree(t(n, t(k,t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = false')), nl, halt." || echo "El predicado no existe en es_arbol.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando construir_arbol.pl..."
