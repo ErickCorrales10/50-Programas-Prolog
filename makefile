@@ -187,6 +187,34 @@ run:
 	@swipl -s gray.pl -g "gray(3, C), write('gray(3)'), nl, write('C = '), write(C), nl, halt." || echo "El predicado no existe en gray.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
+	@echo "Ejecutando huffman.pl..."
+	@swipl -s huffman.pl -g "ejecutar, nl, halt." || echo "El predicado no existe en huffman.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando es_arbol.pl..."
+	@swipl -s es_arbol.pl -g "istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil))), t(m, nil, nil)), t(u, t(p, nil, t(q, nil, nil)), nil))) -> write('istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = true') ; write('istree(t(n, t(k,t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = false'), nl, halt." || echo "El predicado no existe en es_arbol.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando construir_arbol.pl..."
+	@swipl -s construir_arbol.pl -g "cbal_tree(3, Tree), write('cbal_tree(3)'), nl, write('Tree = '), write(Tree), nl, halt." || echo "El predicado no existe en construir_arbol.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando arboles_simetricos.pl..."
+	@swipl -s arboles_simetricos.pl -g "symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) -> write('symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) = true') ; write('symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) = false'), nl, halt." || echo "El predicado no existe en arboles_simetricos.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando arbol_busqueda.pl..."
+	@swipl -s arbol_busqueda.pl -g "construct([5, 3, 8, 1, 4, 7, 9], Tree), write('construct([5, 3, 8, 1, 4, 7, 9])'), nl, write('Tree = '), write(Tree), nl, halt." || echo "El predicado no existe en arbol_busqueda.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando paradigma_arbol.pl..."
+	@swipl -s paradigma_arbol.pl -g "show_symmetric_trees(5), nl, halt." || echo "El predicado no existe en paradigma_arbol.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
+	@echo "Ejecutando arbol_altura.pl..."
+	@swipl -s arbol_altura.pl -g "hbal_tree(3, Tree), write('hbal_tree(3)'), nl, write('Tree = '), write(Tree), nl, halt." || echo "El predicado no existe en arbol_altura.pl."
+	@read -p "Presiona Enter para continuar..." dummy; clear
+
 # Regla para limpiar (opcional)
 clean:
 	@echo "Limpieza completa"
