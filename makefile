@@ -192,7 +192,6 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando es_arbol.pl..."
-	@swipl -s co_primos.pl -g "(coprime(14, 15) -> write('14 es coprimo de 15: true') ; write('14 es coprimo de 15: false')), nl, halt." || echo "El predicado no existe en primo.pl."	
 	@swipl -s es_arbol.pl -g "(istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil))), t(m, nil, nil)), t(u, t(p, nil, t(q, nil, nil)), nil))) -> write('istree(t(n, t(k, t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = true') ; write('istree(t(n, t(k,t(c, t(a, nil, nil), t(e, t(d, nil, nil), t(g, nil, nil)))) = false')), nl, halt." || echo "El predicado no existe en es_arbol.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
@@ -201,7 +200,7 @@ run:
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando arboles_simetricos.pl..."
-	@swipl -s arboles_simetricos.pl -g "symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) -> write('symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) = true') ; write('symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) = false'), nl, halt." || echo "El predicado no existe en arboles_simetricos.pl."
+	@swipl -s arboles_simetricos.pl -g "(symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) -> write('symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) = true') ; write('symmetric(t(a, t(b, t(c, nil, nil), t(d, nil, nil)), t(b, t(d, nil, nil), t(c, nil, nil)))) = false')), nl, halt." || echo "El predicado no existe en arboles_simetricos.pl."
 	@read -p "Presiona Enter para continuar..." dummy; clear
 
 	@echo "Ejecutando arbol_busqueda.pl..."
